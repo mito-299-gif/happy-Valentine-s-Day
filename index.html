@@ -42,6 +42,20 @@
     </div>
     <script src="./static/jai.js"></script>
     <script>
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.classList.add('heart-rain');
+            heart.innerHTML = '🩷';
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = Math.random() * 2 + 3 + 's';
+            document.body.appendChild(heart);
+
+            setTimeout(() => {
+                heart.remove();
+            }, 5000);
+        }
+
+        setInterval(createHeart, 300);
         var isPlaying = false;
 
         function playMusic() {

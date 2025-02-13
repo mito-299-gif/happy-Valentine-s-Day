@@ -168,3 +168,17 @@ button:hover {
 .gift-button:hover {
     background-color: #ff00d0;
 }
+
+.heart-rain {
+    position: fixed;
+    top: -10vh;
+    font-size: 2rem;
+    animation: fall linear infinite;
+    pointer-events: none;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(110vh);
+    }
+}
