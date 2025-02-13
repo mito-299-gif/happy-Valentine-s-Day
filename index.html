@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./static/dbfdcb92875f83958d6d84b2eda390b8_cu1n9fle878c738hprk0_image.png"
+        type="image/x-icon">
+    <link rel="stylesheet" href="./static/1.css">
+    <title>🤍</title>
+</head>
+
+<body>
+    <div class="hearts-container"></div>
+
+    <div class="container">
+        <h1>happy Valentine's Day 💝</h1>
+        <div class="heart" onclick="playMusicAndShowMessage()">💝</div>
+        <div id="message" class="hidden">
+            <p>วาเลนไทน์ปีนี้ วันที่14 กุมภาพันธ์
+                ไม่ขออะไรมากมาย ขอแค่เธออยู่กับฉัน
+                ดอกกุหลาบช่อนี้ ฉันมอบให้เธอ
+                ตกหลุมรักตั้งแต่แรกเจอ
+                ก็ไม่รู้ว่าเธอจะรักฉันมั๊ย🥺</p>
+            <p>แต่ฉันรักเธอ…</p>
+            <button onclick="showSurprise()">🐼</button>
+        </div>
+        <div id="surprise" class="hidden">
+            <br><br><br>
+            <p></p>
+            <p> </p>
+
+            <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExNjBxc2U4cXM1MjB1ZDIybWZzZGh1YzI1ODhlcm00MjF1YnpyZjB4ZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/sc54SIQ5QekyhMvat9/giphy.gif"
+                alt="Surprise GIF">
+            <br><br>
+
+            <!-- <a href="#" id="gift-link" class="gift-button">🎁</a> -->
+
+            <p> I LOVE YOU
+            </p>
+        </div>
+    </div>
+    <script src="./static/jai.js"></script>
+    <script>
+        var isPlaying = false;
+
+        function playMusic() {
+            var audio = new Audio('./static/ssstik.io_1739425718695.mp3');
+            if (!isPlaying) {
+                audio.loop = true;
+                audio.play();
+                isPlaying = true;
+                audio.addEventListener('ended', function () {
+                    audio.play();
+                });
+            }
+        }
+
+        function showMessage() {
+            const message = document.getElementById("message");
+            message.classList.remove("hidden");
+        }
+
+        function showSurprise() {
+            const surprise = document.getElementById("surprise");
+            surprise.classList.remove("hidden");
+        }
+
+        function playMusicAndShowMessage() {
+            playMusic();
+            showMessage();
+        }
+    </script>
+</body>
+
+</html>
